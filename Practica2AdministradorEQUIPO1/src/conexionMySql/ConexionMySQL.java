@@ -34,14 +34,6 @@ public class ConexionMySQL {
 		
 	}
 	public ConexionMySQL(){
-		
-	}
-	
-//	public static void main(String args[]){
-//		Conexion con = new Conexion();
-//		con.obtenerConexion();
-//	}
-	public Connection obtenerConexion(){
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
 			this.conexion = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/gestionusuarios","root","JIMENEZ");
@@ -57,6 +49,13 @@ public class ConexionMySQL {
 			e.printStackTrace();
 			
 		}
+	}
+	
+//	public static void main(String args[]){
+//		Conexion con = new Conexion();
+//		con.obtenerConexion();
+//	}
+	public Connection obtenerConexion(){
 		return conexion;
 	}
 	
